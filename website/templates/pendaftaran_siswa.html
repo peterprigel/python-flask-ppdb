@@ -1,0 +1,923 @@
+<!--
+=========================================================
+* Soft UI Design System - v1.0.5
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/kuning.jpg" type="image/icon type">
+        <meta name="csrf-token" content="qD7Wpy8pywZxVbRpx4rUkyoH5dBGZbgnYrglDJ4C">
+        <title> TRITHE </title>
+
+        <!-- Select2 -->
+        <link rel="stylesheet" media="screen, print" href="#">
+        
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+      
+        <!-- CSS Files -->
+        <link id="pagestyle" href="https://ppdb.riau.go.id/css/soft-ui/soft-design-system.css" rel="stylesheet" />
+        <!--  SweetAlert2  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <style>
+    .timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #2C3256;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #051228!important;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 0px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 0px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 0px 20px 20px;
+    }
+}
+</style>
+                <style>
+            /* .alert-blink-sederhana {
+            animation: blinkMe 3s linear infinite;
+            }
+            @keyframes  blinkMe {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            } */
+        </style>
+        <style type="text/css">
+            .alert-dismissible .btn-close {
+                padding: 1rem 1rem !important;
+            }
+
+            .alert-blink {
+                -webkit-animation: blink 2s linear infinite;
+                -moz-animation: blink 2s linear infinite;
+                -ms-animation: blink 2s linear infinite;
+                -o-animation: blink 2s linear infinite;
+                animation: blink 2s linear infinite;
+            }
+            @-webkit-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-moz-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-ms-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-o-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @keyframes  blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            
+            @media  screen and (min-width: 576px) {
+                .modal-xxl {
+                    width: 90% !important;
+                    max-width: 90% !important;
+                }
+            }
+        </style>
+        <style>
+            .select2-container .select2-selection--single{
+                height: 36px;
+                border-radius: 10px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__rendered{
+                line-height: 24px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__arrow b{
+                margin-top: 0px;
+            }
+            .select2-results__option{
+                font-size:.8rem;
+            }
+            .select-btn{
+                width:250px; 
+                height:40px; 
+                color:black; 
+                border-radius:50px
+            }
+            .buttons-excel{
+                background: #00aa4e;
+                color:#fff;
+            }
+            #datatable_wrapper, #ranking-table{
+                background: #fdfdfd;
+                border-radius: 10px;
+                margin-top: 20px;
+                border: 1px solid #ddd;
+            }
+            /* .col-col{
+                display: flex;
+            } */
+    
+            @media (max-width: 768px) { 
+                /* .col-col{
+                    display: block;
+                } */
+                .select-btn{
+                    min-width:100%;
+                }
+                div.dataTables_wrapper div.dataTables_filter input{
+                    width:140px;
+                }
+                .dataTables_length select{
+                    appearance: unset;
+                }
+                div.dataTables_wrapper div.dataTables_length select{
+                    width: 50px;
+                }
+                .footer-mobile{
+                    display: none;
+                }
+            }
+        </style>
+        
+    </head>
+
+    <body class="" style="background:#f9f9f9; font-family:Poppins">
+        <style>
+    .dropdown.nav-item .dropdown-menu-animation.show {
+        height: 150px;
+    }
+    #dropdown-profile:before{
+        display:none !important;
+    }
+</style>
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary position-sticky z-index-sticky top-0 w-100 top-0 z-index-fixed position-absolute my-0 py-0 start-0 end-0"> -->
+    <nav class="navbar navbar-expand-lg blur blur-rounded top-2 z-index-fixed shadow-bg-gradient-warning position-sticky z-index-sticky top-0 top-0 z-index-fixed position-absolute my-3 py-2 start-0 end-0 mx-2 col-md-mx-4">
+  
+        <div class="container" style="padding: 1.5px">
+            <a class="navbar-brand text-black font-weight-bolder" href="/" rel="tooltip" 
+                title="PPDB 2022">
+                <!-- <img src="img/ppdb1.png" width="auto" height="35px"> -->
+                <img src="{{ url_for('static', filename='img/ppdb1.png')}}" width="auto" height="35px">
+            </a>
+            
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mt-2">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </span>
+            </button>
+    
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                <ul class="navbar-nav navbar-nav-hover ms-lg-auto">
+                
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon me-2" href="/">
+                            <p class="d-inline text-sm z-index-1 font-bold">
+                                Halaman Utama
+                            </p>
+                        </a>
+                    </li>
+                    
+                    
+                    <style>
+                        .dropdown-item:focus, .dropdown-item:hover{
+                            color:#fff !important;
+                        }
+                        .dropdown.nav-item .dropdown-menu-animation.show{
+                            overflow: hidden;
+                            height: auto;
+                            margin-bottom:10px;
+                        }
+                    </style>
+                    
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                            id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Informasi
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                            <div class="d-none d-lg-block">
+                                <ul class="list-group">
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 border-radius-md text-dark" href="/informasi-sekolah">
+                                            <div class="d-flex">
+                                                <div>
+                                                    Sekolah
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </li>
+                                    </li>
+                                        <li class="nav-item list-group-item border-0 p-0">
+                                             <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                                    <div class="d-flex">
+                                                <div>
+                                                    Persyaratan
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                            <div class="d-flex">
+                                                <div>
+                                                    Pendaftaran Siswa
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-md-12 g-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-sekolah">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Sekolah
+                                            </div>
+                                        </div>
+                                    </a>
+                                      <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                        <div class="d-flex">
+                                            <div>
+                                                Persyaratan
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                            id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Statistik
+                           
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                            <div class="d-none d-lg-block">
+                                <ul class="list-group">
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                            <div class="d-flex">
+                                                <div>
+                                                        Status Pendaftaran Siswa
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                   </ul>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-md-12 g-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Status Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                        <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/logout" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Keluar
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/login" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Masuk
+                            </a>
+                        </li>
+                        <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/sign-up" class="btn btn-warning btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Registrasi
+                            </a>
+                        </li> -->
+                                </ul>
+            </div>
+        </div>
+    </nav>       
+    
+    <!-- stop navbarr-->
+    <div class="container mt-5" style="min-height: 70vh !important;">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">                        
+                    <!-- <div class="mb-4">
+                        <div class="w-50">
+                            <nav aria-label="breadcrumb ">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="https://ppdb.riau.go.id">Halaman Utama</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Informasi Persyaratan</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <h3>Informasi Persyaratan</h3>
+                    </div> -->
+                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<style>
+    .icon-sm i {
+        top: 7px !important; 
+    }
+    .bi{
+        position: absolute;
+        right: 15px;
+    }
+</style>
+
+<div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+    <div class="container border-bottom bg-gradient-dark">
+        <div class="row justify-space-between py-2">
+            <div class="col-lg-3 me-auto" style="height:15px">
+                
+            </div>
+        </div>
+    </div>
+    
+    <section class="py-4 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" style="margin-bottom:25px">
+                <h2> Form pendaftaran </h2>
+                <a href="informasi-terdaftar.html" style="color: rgb(0, 4, 255);">Data pendaftar</a>
+            </div>
+            
+            <br>
+            <div class="card-body pt-0">
+                <form role="form" method="POST">
+                    <input type="hidden" name="_token" value="8JUnCqRyf6RoBo3JnRpU6qOA4bSmRwMk8qmCo3xC">
+                    <div class="mb-3">
+                        <div style="font-size: 1rem; width:100%; padding:10px; color:#fff; border-radius:10px; background:#8398c3;text-align:justify">
+                            <strong> Data Diri Siswa</strong>
+                        </div>
+                        <label for="nisn" class="col-md-4 col-form-label text-md-right">NISN</label>
+                        <input type="text" id="nisn" name="nisn" autocomplete="current-username"
+                        class="form-control form-control-lg " 
+                        placeholder="Masukkan Nisn" aria-label="username" aria-describedby="username-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan nama lengkap " aria-label="Password" aria-describedby="password-addon" required>
+                    </div>  
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Tempat Lahir</label>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Tempat Lahir " aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Tanggal Lahir</label>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukan tanggal lahir" aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Jenis Kelamin </label>
+                        <select class="form-control form-select-lg" id="jenis_k" name="jenis_k" required>
+                            <option value="">Pilih Jenis Kelamin</option>
+                            <option value="Perempuan">Perempuan</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                        </select>
+                        <!-- <i>*Pilih Jenis Kelamin</i> -->
+                        <!-- <input type="password" id="jenis_k" name="jenis_k" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Jenis Kelamin" aria-label="Password" aria-describedby="password-addon"> -->
+                        
+                        </div>
+                    <div class="mb-3">
+                        <label class="col-md-4 col-form-label text-md-right">Agama</label>
+                        <!-- <input type="password" id="agama" name="agama" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Jenis Kelamin" aria-label="Password" aria-describedby="password-addon"> -->
+                        <select class="form-control form-select-lg" id="agama" name="agama" required>
+                            <option value="">Pilih Agama</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                        <!-- <i>*Pilih Agama</i> -->
+                       
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Alamat Rumah</label>
+                        <input type="" id="alamat_rumah" name="alamat_rumah" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Alamat" aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Kabupaten/ Kota</label>
+                        <input type="text" id="kabupaten_kota" name="kabupaten_kota" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Kabupaten" aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Provinsi</label>
+                        <input type="text" id="provinsi" name="provinsi" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Provinsi" aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">No Telp</label>
+                        <input type="text" id="no_telp" name="no_telp" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan No Telp" aria-label="Password" aria-describedby="password-addon" required>
+                    </div>
+                  
+
+                    <div style="font-size: 1rem; width:100%; padding:10px; color:#fff; border-radius:10px; background:#8398c3;text-align:justify">
+                    <strong> Data Orangtua</strong>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Nama Ayah</label>
+                        <input type="text" id="nama_ayah" name="nama_ayah" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Nama Ibu" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Nama Ibu</label>
+                        <input type="text" id="nama_ibu" name="nama_ibu" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Nama Ibu" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Alamat Rumah</label>
+                        <input type="text" id="alamat_rumah_ot" name="alamat_rumah_ot" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Alamat Rumah" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">No Telp / WA</label>
+                        <input type="text" id="no_telp_ot" name="no_telp_ot" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan No Telp" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <br>
+                    <div style="font-size: 1rem; width:100%; padding:10px; color:#fff; border-radius:10px; background:#8398c3;text-align:justify">
+                        <strong> Wali</strong>
+                        </div> 
+                    <div class="mb-3">
+                       
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Nama Wali</label>
+                        <input type="text" id="nama_wali" name="nama_wali" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Nama Wali" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Alamat Rumah</label>
+                        <input type="text" id="alamat_rumah_w" name="alamat_rumah_w" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan Alamat Rumah " aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">No Telp / WA</label>
+                        <input type="text" id="no_telp_w" name="no_telp_w" autocomplete="current-password"
+                            class="form-control form-control-lg " 
+                            placeholder="Masukkan No Telp" aria-label="Password" aria-describedby="password-addon">
+                        </div> 
+
+                    <div style="font-size: 1rem; width:100%; padding:10px; color:#fff; border-radius:10px; background:#8398c3;text-align:justify">
+                    <strong> Data Nilai </strong>
+                    
+                    </div> 
+                    <i> (Isikan Nilai akhir Hasil Gabungan Nilai Sekola & Nilai Ujain Nasional)</i>
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Bahasa Indonesia</label>
+                        <input type="number" id="bindo" name="bindo" autocomplete="current-password"
+                            class="form-control " 
+                            placeholder="0" aria-label="Password" aria-describedby="password-addon" required> 
+                            <i>contoh: 9,45 </i>  
+                    </div>  
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Bahasa Inggis</label>
+                        <input type="number" id="bing" name="bing" autocomplete="current-password"
+                            class="form-control " 
+                            placeholder="0" aria-label="Password" aria-describedby="password-addon" required>
+                            <i>contoh: 9,45 </i>  
+                    </div>  
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Matematika</label>
+                        <input type="number" id="matematika" name="matematika" autocomplete="current-password"
+                            class="form-control " 
+                            placeholder="0" aria-label="Password" aria-describedby="password-addon" required>
+                            <i>contoh: 9,45 </i>  
+                            
+                    </div>  
+                    <div class="mb-3">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">IPA</label>
+                        <input type="number" id="ipa" name="ipa" autocomplete="current-password"
+                            class="form-control " 
+                            placeholder="0" aria-label="Password" aria-describedby="password-addon" required>
+                            <i>contoh: 9,45 </i>  
+                            
+                    </div>  
+                    <div style="font-size: 1rem; width:100%; padding:10px; color:#fff; border-radius:10px; background:#8398c3;text-align:justify">
+                    <strong> Pilihan Jurasan </strong>
+                    </div>   
+                </div> 
+                <div class="mb-3">
+                    <label for="password" class="col-md-4 col-form-label text-md-right">Jalur pendaftaran</label>
+                    
+                    <input type="text" id="jalur_pendaftaran" name="jalur_pendaftaran" autocomplete="current-password"
+                        class="form-control form-control-lg " 
+                        placeholder="Masukan jalur" aria-label="Password" aria-describedby="password-addon" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="col-md-4 col-form-label text-md-right">Jurusan pertama</label>
+                    <select class="form-control form-select-lg" id="jurusan_pertama" name="jurusan_pertama" required>
+                        <option value="">Pilih Jurusan Pertama</option>
+                        <option value="Teknik Multimedia">Teknik Multimedia</option>
+                        <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                        <option value="Teknik Jaringan Akses Telekomunikasi">Teknik Jaringan Akses Telekomunikasi</option>
+                        <option value="Teknik Rekayasa Perangkat Lunak">Teknik Rekayasa Perangkat Lunak</option>
+                    </select>
+                    <!-- <input type="text" id="	jurusan_pertama" name="	jurusan_pertama" autocomplete="current-password"
+                        class="form-control form-control-lg " 
+                        placeholder="Masukan Jurusan" aria-label="Password" aria-describedby="password-addon">
+                        <i>Multimedia , TKJ , TJA , RPL</i> -->
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="col-md-4 col-form-label text-md-right">Jurusan kedua</label>                   
+                    <select class="form-control form-select-lg" id="jurusan_kedua" name="jurusan_kedua" required>
+                        <option value="">Pilih Jurusan Kedua</option>
+                        <option value="Teknik Multimedia">Teknik Multimedia</option>
+                        <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                        <option value="Teknik Jaringan Akses Telekomunikasi">Teknik Jaringan Akses Telekomunikasi</option>
+                        <option value="Teknik Rekayasa Perangkat Lunak">Teknik Rekayasa Perangkat Lunak</option>
+                    </select>
+                    <!-- <input tsype="text" id="jurusan_kedua" name="jurusan_kedua" autocomplete="current-password"
+                        class="form-control form-control-lg " 
+                        placeholder="Masukan Jurusan" aria-label="Password" aria-describedby="password-addon"> -->
+                    <!-- <i>Multimedia , TKJ , TJA , RPL</i> -->
+                       
+                </div>
+        </div class="text-center">
+                                    <button type="submit" class="btn btn-warning btn-lg w-100 mt-4 mb-0" style="color: #051228;">
+                                        Submit 
+                                    </button>
+
+                                                                    </div>
+                </form>
+            
+            
+        <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+        <!--   Core JS Files   -->
+        <script src="https://ppdb.riau.go.id/backend/adminlte/plugins/jquery/jquery.min.js"></script>
+        <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <!-- <script src="https://ppdb.riau.go.id/backend/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+        <!-- soft-ui -->        
+        <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/plugins/perfect-scrollbar.min.js"></script>
+        <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+        <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/plugins/countup.min.js"></script>
+        <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+        <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/plugins/parallax.min.js"></script>
+        <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+        <!-- <script src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script> -->
+        <!--  SweetAlert2  -->
+        <script src="https://ppdb.riau.go.id/backend/adminlte/plugins/sweetalert2/sweetalert2.min.js"></script>
+        <!--  custom loadmodal  -->
+        <script src="https://ppdb.riau.go.id/resources/vendor/jquery/blockUI.js"></script>
+        <!-- <script src="https://ppdb.riau.go.id/resources/vendor/jquery/jquery.loadmodal.js"></script> -->
+        <!-- Select2 -->
+        <script src="https://ppdb.riau.go.id/backend/adminlte/plugins/select2/js/select2.full.min.js"></script>
+        <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
+        
+                
+        <!-- // datatable yang worked untuk responsive & auto-hide kolom
+        @ hasSection('datatables_index')
+	        @ include('layouts.backend.datatable-js')
+        @ endif -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VGV7BVNT"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q7VGV7BVNT');
+        </script>
+        
+        <script type="text/javascript">
+	
+	function aptikaLoadingFadeIn() {
+		loadingBlock();
+	}
+
+	function aptikaLoadingFadeOut() {
+		$.unblockUI();
+	}
+	
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // escape key maps to keycode `27`
+			aptikaLoadingFadeOut()
+		}
+	});
+
+	function loadingBlock() { 
+		$.blockUI({
+			css: { 
+				border: 'none', 
+				padding: '10px', 
+				width: '150px', 
+				top:"40%",left:"45%",
+				textAlign:"center",
+				backgroundColor: '#000', 
+				'-webkit-border-radius': '10px', 
+				'-moz-border-radius': '10px', 
+				opacity: .5, 
+				color: '#fff',
+                baseZ: 9999,
+			},
+			message: '<h4>Loading... <i class="fa fa-refresh fa-spin"></i></h4>',
+			onOverlayClick: $.unblockUI
+		}); 
+	}
+
+	$.fn.hasAttr = function(name) {
+		return (typeof $(this).attr(name) !== 'undefined' && $(this).attr(name) !== false &&  $(this).attr(name) !== null);
+	};
+
+    $.fn.exist = function(property) {
+		return (typeof property !== 'undefined' && property !== false &&  property !== null);
+    }
+
+	$.fn.select2Spinner = function(action, element, placeholder) {
+		if (action == 'show') {
+			$('#select2-'+element+'-container').prepend('<i class="fa fa-spinner fa-spin"></i>');
+		} else {
+			$('#select2-'+element+'-container').html('<span class="select2-selection__placeholder">'+placeholder+'</span>');
+		}
+	}
+
+    if (document.getElementById('typed')) {
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+    
+    if (document.getElementsByClassName('page-header')) {
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset;
+            var bgParallax = document.querySelector('.page-header');
+            if ($(this).exist(bgParallax)) {
+                var limit = bgParallax.offsetTop + bgParallax.offsetHeight;
+                if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit) {
+                    bgParallax.style.backgroundPositionY = (50 - 10 * scrollPosition / limit * 3) + '%';
+                } else {
+                    bgParallax.style.backgroundPositionY = '50%';
+                }
+            }
+        });
+    }
+
+	$(document).on('keyup change ', '.form-control', function() {
+		$('#kirim-submit').show();
+    });
+    
+    $('.select2').select2();
+
+	
+    $(document).ready(function() {
+        $(document).on('click', '.btn-prev, .btn-next', function() {
+            var _data_href = ($(this).hasAttr('data-href')) ? $(this).attr('data-href') : '';
+			var _url_target = "https://ppdb.riau.go.id" + '/' + _data_href;
+			location.href= _url_target;
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    // $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+    // $.fn.modal.Constructor.prototype._enforceFocus = function() {};
+</script>            </body>
+</html>

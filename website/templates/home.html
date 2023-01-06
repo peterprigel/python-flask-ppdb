@@ -1,0 +1,1017 @@
+
+<!--
+=========================================================
+* Soft UI Design System - v1.0.5
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <link rel="icon" href="img/kuning.jpg" type="image/icon type">
+        <img src="{{ url_for('static', filename='img/PPDB - logomark.png')}}" alt="test"> -->
+        <meta name="csrf-token" content="qD7Wpy8pywZxVbRpx4rUkyoH5dBGZbgnYrglDJ4C">
+        <title> TRITHE </title>
+
+        <!-- Select2 -->
+        <link rel="stylesheet" media="screen, print" href="#">
+        
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+      
+        <!-- CSS Files -->
+        <link id="pagestyle" href="https://ppdb.riau.go.id/css/soft-ui/soft-design-system.css" rel="stylesheet" />
+        <!--  SweetAlert2  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <style>
+    .timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #2C3256;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #051228!important;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 0px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 0px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 0px 20px 20px;
+    }
+}
+</style>
+                <style>
+            /* .alert-blink-sederhana {
+            animation: blinkMe 3s linear infinite;
+            }
+            @keyframes  blinkMe {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            } */
+        </style>
+        <style type="text/css">
+            .alert-dismissible .btn-close {
+                padding: 1rem 1rem !important;
+            }
+
+            .alert-blink {
+                -webkit-animation: blink 2s linear infinite;
+                -moz-animation: blink 2s linear infinite;
+                -ms-animation: blink 2s linear infinite;
+                -o-animation: blink 2s linear infinite;
+                animation: blink 2s linear infinite;
+            }
+            @-webkit-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-moz-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-ms-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-o-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @keyframes  blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            
+            @media  screen and (min-width: 576px) {
+                .modal-xxl {
+                    width: 90% !important;
+                    max-width: 90% !important;
+                }
+            }
+        </style>
+        <style>
+            .select2-container .select2-selection--single{
+                height: 36px;
+                border-radius: 10px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__rendered{
+                line-height: 24px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__arrow b{
+                margin-top: 0px;
+            }
+            .select2-results__option{
+                font-size:.8rem;
+            }
+            .select-btn{
+                width:250px; 
+                height:40px; 
+                color:black; 
+                border-radius:50px
+            }
+            .buttons-excel{
+                background: #00aa4e;
+                color:#fff;
+            }
+            #datatable_wrapper, #ranking-table{
+                background: #fdfdfd;
+                border-radius: 10px;
+                margin-top: 20px;
+                border: 1px solid #ddd;
+            }
+            /* .col-col{
+                display: flex;
+            } */
+    
+            @media (max-width: 768px) { 
+                /* .col-col{
+                    display: block;
+                } */
+                .select-btn{
+                    min-width:100%;
+                }
+                div.dataTables_wrapper div.dataTables_filter input{
+                    width:140px;
+                }
+                .dataTables_length select{
+                    appearance: unset;
+                }
+                div.dataTables_wrapper div.dataTables_length select{
+                    width: 50px;
+                }
+                .footer-mobile{
+                    display: none;
+                }
+            }
+        </style>
+        
+    </head>
+
+    <body class="" style="background:#f9f9f9; font-family:Poppins">
+        <style>
+    .dropdown.nav-item .dropdown-menu-animation.show {
+        height: 150px;
+    }
+    #dropdown-profile:before{
+        display:none !important;
+    }
+</style>
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary position-sticky z-index-sticky top-0 w-100 top-0 z-index-fixed position-absolute my-0 py-0 start-0 end-0"> -->
+<nav class="navbar navbar-expand-lg blur blur-rounded top-2 z-index-fixed shadow-bg-gradient-warning position-sticky z-index-sticky top-0 top-0 z-index-fixed position-absolute my-3 py-2 start-0 end-0 mx-2 col-md-mx-4">
+  
+    <div class="container" style="padding: 1.5px">
+        <a class="navbar-brand text-black font-weight-bolder" href="/" rel="tooltip" 
+            title="PPDB 2022">
+            <!-- <img src="img/ppdb1.png" width="auto" height="35px"> -->
+            <img src="{{ url_for('static', filename='img/ppdb1.png')}}" width="auto" height="35px">
+        </a>
+        
+        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+            <ul class="navbar-nav navbar-nav-hover ms-lg-auto">
+            
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon me-2" href="/">
+                        <p class="d-inline text-sm z-index-1 font-bold">
+                            Halaman Utama
+                        </p>
+                    </a>
+                </li>
+                
+                
+                <style>
+                    .dropdown-item:focus, .dropdown-item:hover{
+                        color:#fff !important;
+                    }
+                    .dropdown.nav-item .dropdown-menu-animation.show{
+                        overflow: hidden;
+                        height: auto;
+                        margin-bottom:10px;
+                    }
+                </style>
+                
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                        id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Informasi
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                        <div class="d-none d-lg-block">
+                            <ul class="list-group">
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a class="dropdown-item py-2 border-radius-md text-dark" href="/informasi-sekolah">
+                                        <div class="d-flex">
+                                            <div>
+                                                Sekolah
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </li>
+                                </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                         <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                                <div class="d-flex">
+                                            <div>
+                                                Persyaratan
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a class="dropdown-item py-2 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row d-lg-none">
+                            <div class="col-md-12 g-0">
+                                <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-sekolah">
+                                    <div class="d-flex">
+                                        <div>
+                                                Sekolah
+                                        </div>
+                                    </div>
+                                </a>
+                                  <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                    <div class="d-flex">
+                                        <div>
+                                            Persyaratan
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                    <div class="d-flex">
+                                        <div>
+                                                Pendaftaran Siswa
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                        id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Statistik
+                       
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                        <div class="d-none d-lg-block">
+                            <ul class="list-group">
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Status Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                               </ul>
+                        </div>
+                        <div class="row d-lg-none">
+                            <div class="col-md-12 g-0">
+                                <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                    <div class="d-flex">
+                                        <div>
+                                                Status Pendaftaran Siswa
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                    <li class="nav-item my-auto ms-3 ms-lg-0">
+                        <a href="/logout" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                            Keluar
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item my-auto ms-3 ms-lg-0">
+                        <a href="/login" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                            Masuk
+                        </a>
+                    </li>
+                    <li class="nav-item my-auto ms-3 ms-lg-0">
+                        <a href="/sign-up" class="btn btn-warning btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                            Registrasi
+                        </a>
+                    </li> -->
+                            </ul>
+        </div>
+    </div>
+</nav>          
+    
+            <!-- -------- END HEADER 7 w/ text and video ------- -->
+<!-- Section with four info areas left & one card right with image and waves -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+    .swal2-popup{
+    border-radius:20px !important;
+    padding:50px 20px !important;
+    min-width: 60% !important;
+    }
+    </style>
+    
+  <section class="py-0">
+    <div class="container">
+    <div class="row align-items-center mt-6 mt-md-7">
+        <div class="col-lg-6">
+        <div class="row justify-content-start">
+            <div class="col-md-15">
+            <div class="info mb-md-9">
+                <h2 class="text-dark text-gradient">PENERIMAAN PESERTA DIDIK BARU (PPDB) BATAM </h2> 
+                <h5>Pra-pendaftaran 20 - 25 Juni 2024</h5>
+                <h5>Pendaftaran 27 Juni - 01 Juli 2024</h5>
+                <!-- <button type="button" class="btn btn-warning mt-1" style="border-radius: 20px; letter-spacing:2px">Informasi Sekolah</button> -->
+                <br>
+                <a href="{{ url_for('static', filename='assets/doc/panduan-penggunaan-website.pdf')}}" target="_blank"><button type="button" id="panduan-ppdb" class="btn btn-warning mt" style="border-radius: 20px; letter-spacing:2px; color: #051228;">Buku Panduan PPDB Online</button></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-5 ms-auto mt-lg-0 mt-5">
+        <!-- <img src="img/pendafaran 2.svg"  height="400px"> -->
+        <img src="{{ url_for('static', filename='img/pendafaran 2.svg')}}" height="400px">
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Youtube Video -->
+	<section class="pt-6 pb-6 position-relative bg-gradient-light">
+        <div class="col-md-12 text-center text-start">
+          <h3 class="text-dark text-gradient z-index-1 position-relative">Video Profile</h3><p>merupakan vidio profile</p>
+        </div>
+			<div class="container">
+				<div class="row align-items-center pt-2">
+					<div class="col-lg-12">
+                        <iframe style="width: 70vw;height: 40vw;max-width: 100%;margin: 0 auto;display: block;" width="640" height="360" src="https://www.youtube.com/embed/D5L5Mh0f7YQ" title="Video Profil Politeknik Negeri Batam 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+					</div>
+                    <p></p>
+				</div>
+			</div>
+	</section>
+
+  <section class="pt-6 pb-6 position-relative bg-gradient-light">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center text-start">
+          <h3 class="text-dark text-gradient z-index-1 position-relative">Statistik Pendaftaran PPDB</h3>
+          <p class="text-dark text-gradient opacity-8 mb-0">Informasi Jumlah Pendaftar PPDB Tahun Ajaran 2023/2024 Provinsi Riau</p>
+        </div>
+        <div class="container">
+          <div class="row mt-5 mb-5 mx-auto text-center" style="width: 100%; ">
+              <!-- <div class="col-md-4 px-md-5 mb-5">
+                <div class="card card-provinsi">
+                  <div class="card-body">
+                    <h5 class="card-title">Pendaftaran Hari Ini</h5>
+                    <h3>0</h3>
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-sm">
+                <div class="card card-provinsi" style="width: 50%; margin-left: 45%;">
+                  <div class="card-body">
+                      <h5 class="card-title">Total Pendaftar</h5>
+                      {% for item in tPendaftar %}
+                      <h3>{{item.0}}</h3>
+                      {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                  <div class="card card-provinsi" style="width: 50%; margin-left: 5%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Total Daya Tampung</h5>
+                      <h3>100</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          <div style="text-align: justify">
+            <p style="font-size:.9rem;">
+              *Pendaftaran Hari Ini : Menghitung semua aktivitas pendaftaran pada hari ini (menghitung semua pendaftaran yang dilakukan siswa termasuk pendaftaran pada kesempatan kedua dan ketiga)
+            </p>
+            <p style="font-size:.9rem;">
+              *Total Pendaftar : Menghitung jumlah siswa yang sudah mendaftar selama PPDB 2023/2024 berlangsung (siswa yang mendaftar lebih dari satu kali hanya dihitung sebagai satu pendaftar)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>            <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
+  <section id="pendaftar" class="pt-7 pb-8 position-relative" style="background: #fefefe;">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-start text-center">
+          <h3 class="text-dark text-gradient z-index-1 position-relative">Tahapan PPDB</h3>
+          <p class="text-dark text-gradient opacity-8 mb-0">Tahapan Penerimaan Peserta Didik Baru (PPDB) Tahun Ajaran 2023/2024 Provinsi Riau</p>
+        </div>
+      </div>
+
+      <section id="about" class="mt-7">
+       
+                <div class="col-md-12">
+                    <ul class="timeline">
+                        <li>
+                          <div class="timeline-image" style="background:  #fbcf33;">
+                            <img class="img-circle img-responsive" >
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Pengumuman</h4>
+                                  <div>
+                                    <h5 class="subheading" style="background: #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">20 Juni 2023</h5>
+                                  </div>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Pengumuman pendaftaran akan diumamkan melalui media sosial dan website dinas Pendidikan</p>
+                              </div>
+                              <!-- <img src="img/pengumuman.svg" style="width: 80%"> -->
+                              <img src="{{ url_for('static', filename='img/pengumuman.svg')}}" style="width:80%">
+                              
+                          </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image" style="background:  #fbcf33;">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Pra-Pendaftaran</h4>
+                                    <h5 class="subheading" style="background:  #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">20 s.d 25 Juni 2023</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Pra Pendaftaran adalah proses dimana calon siswa mengupload atau melengkapi seluruh dokumen kelengkapan yang dipersyaratkan 
+                                      <ul>
+                                        <li>Melengkapi biodata calon peserta didik</li>
+                                        <li>Menginput koordinat rumah calon peserta didik</li>
+                                        <li>Input nilai rapor semester 1 sd semester 5</li>
+                                        <li>Mengupload dokumen scan asli yang di persyaratkan sesuai dengan jalur atau kelompok pendaftaran</li>
+                                      </ul>
+                                    </p>
+                                </div>
+                                <br>
+                                <img src="{{ url_for('static', filename='img/pra pendaftaran.svg')}}" style="width: 80%">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image" style="background:  #fbcf33;">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Pendaftaran</h4>
+                                    <h5 class="subheading" style="background:  #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">27 Juni s.d 01 Juli 2023</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Pendaftaran adalah proses memilih sekolah dan jalur atau kelompok yang ingin dituju oleh calon peserta didik, serta melengkapi persyaratan khusus apabila sekolah yang dituju memiliki persyaratan khusus</p>
+                                </div>
+                                <br>
+                                <img src="{{ url_for('static', filename='img/pra pendaftaran 2.svg')}}" style="width: 80%">
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image" style="background:  #fbcf33;">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Verifikasi oleh Satuan Pendidikan</h4>
+                                    <h5 class="subheading" style="background: #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">27 Juni s.d 03 Juli 2023</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Verifikasi adalah proses yang dilakukan oleh admin atau panitia sekolah terhadap seluruh data yang terekam pada sistem PPDB tahun 2022</p>
+                                </div>
+                                <br>
+                                <img src="{{ url_for('static', filename='img/verifikasi.svg')}}" style="width: 70%">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image" style="background:  #fbcf33;">
+                              <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Pengumuman Peserta Didik Baru</h4>
+                                  <h5 class="subheading" style="background:  #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">06 Juli 2023</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Penetapan peserta didik yang diterima dilaksanakan oleh kepala satuan pendidikan dan diumumkan kepada masyarakat oleh satuan pendidikan dilakukan setelah proses seleksi selesai dilaksanakan</p>
+                              </div>
+                              <br>
+                              <img src="{{ url_for('static', filename='img/penngumuman peserta didik baru.svg')}}" style="width: 80%">
+                          </div>
+                      </li>
+                      <li class="timeline-inverted">
+                        <div class="timeline-image" style="background:  #fbcf33;">
+                              <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Daftar Ulang</h4>
+                                  <h5 class="subheading" style="background:  #fbcf33; color:#fff;width:fit-content; padding:3px 10px;display:inline-block; font-size:18px;font-weight:normal">07 s.d 09 Juli 2023</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Apabila calon siswa dinyatakan lulus pada pengumuman peserta didik baru, maka dapat melakukan daftar ulang pada sekolah yang dituju</p>
+                              </div>
+                              <br>
+                              <img src="{{ url_for('static', filename='img/daftar ulang.svg')}}" style="width: 80%">
+                          </div>
+                      </li>
+                    </ul>
+        </div>
+    </section>
+
+      <hr class="my-7">
+
+      <div class="row">
+        <div class="col-12 text-start text-center">
+          <h3 class="text-dark text-gradient z-index-1 position-relative">Panduan Penggunaan Aplikasi PPDB</h3>
+          <p class="text-dark text-gradient opacity-8 mb-0">Panduan Penggunaan Aplikasi Penerimaan Peserta Didik Baru (PPDB) Tahun Ajaran 2023/2024 Kota batam</p>
+        </div>
+        
+      </div>
+      <div class="col-md-10 mx-auto">
+          <div class="row align-items-center mt-6 content">
+            <div class="col-md-5 mb-lg-0 mb-0 order-1 order-md-2">
+                <img src="{{ url_for('static', filename='img/pendafaran 2.svg')}}" style="width: 80%">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+              <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                <div style="margin-right:8px;">1. </div>
+                
+                <div>Untuk melakukan pendaftaran Penerimaan Peserta Didik Baru (PPDB) tahun ajaran 2023/2024, calon peserta didik harus melakukan login terlebih dahulu</div>
+              </div> 
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5 mt-lg-0 content">
+              <div class="col-md-5 mb-lg-0 mb-0">
+                  <img src="{{ url_for('static', filename='img/mengisi biodata 2.svg')}}" style="width: 100%">
+              </div>
+              <div class="col-md-7">
+                <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                  <div style="margin-right:8px;">2. </div>
+                  
+                  <div>Selanjutnya, calon peserta didik diminta untuk mengisi dan melengkapi biodata pribadi, biodata orang tua dan nilai pada halaman submenu biodata</div>
+                </div> 
+              </div>   
+          </div>
+
+          <div class="row align-items-center mt-5 content">
+            <div class="col-md-5 mb-lg-0 mb-2 order-1 order-md-2">
+                <img src="{{ url_for('static', filename='img/koordinat tempat tinggal.svg')}}" style="width: 80%">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+              <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                <div style="margin-right:8px;">3. </div>
+                
+                <div>Calon peserta didik juga harus memasukkan titik koordinat berdasarkan alamat tempat tinggal yang didapat dari situs google maps (submenu kunci lokasi). <br><br> Catatan : Kunci lokasi dapat diubah selama masa pra-pendaftaran dan akan dikunci (tidak lagi dapat diubah) saat jadwal pendaftaran dibuka</div>
+              </div> 
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5 content">
+            <div class="col-md-5 mb-lg-0 mb-2">
+                <img src="{{ url_for('static', filename='img/pra pendaftaran 2.svg')}}" style="width: 80%">
+            </div>
+            <div class="col-md-7">
+              <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                <div style="margin-right:8px;">4. </div>
+                
+                <div>Selama masa pra pendaftaran (lihat jadwal pada tahapan PPDB), calon peserta didik juga diminta untuk melengkapi semua persyaratan umum yang dibutuhkan pada submenu persyaratan umum. <br><br> Catatan : Selama masa pra-pendaftaran calon peserta didik hanya dapat mengisi dan melengkapi biodata, kunci lokasi dan melengkapi persyaratan umum</div>
+              </div> 
+            </div>   
+          </div>
+
+          <div class="row align-items-center mt-5 content">
+            <div class="col-md-5 mb-lg-0 mb-1 order-1 order-md-2">
+                <img src="{{ url_for('static', filename='img/melengkapi menu sekolah.svg')}}" style="width: 80%">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+              <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                <div style="margin-right:8px;">5. </div>
+                
+                <div>Pada masa pendaftaran, calon peserta didik sudah dapat memilih sekolah (submenu pilih sekolah) yang dituju dan melengkapi persyaratan khusus (submenu persyaratan khusus). <br><br> Catatan : Hanya jalur dan jurusan tertentu saja yang membutuhkan persyaratan khusus. Kamu dapat melihat informasi pada menu informasi submenu peryaratan</div>
+              </div> 
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5 content">
+            <div class="col-md-5 mb-lg-0 mb-1">
+                <img src="{{ url_for('static', filename='img/verifikasi.svg')}}" style="width: 70%">
+            </div>
+            <div class="col-md-7">
+              <div style="display: flex;color:#051228!important;font-size:1.1rem;line-height:2rem;text-align:justify">
+                <div style="margin-right:8px;">6. </div>
+                <div>Setelah melakukan pendaftaran, semua berkas pendaftaran akan diverifikasi oleh operator sekolah. Jika berkas pendaftaran berhasil diverifikasi maka akan langsung masuk ke dalam perankingan. Kamu dapat melihat langsung hasil perankingan pada menu perankingan<br><br>Catatan : Perankingan selama masa pendaftaran berlangusng bersifat sementara dan masih dapat terus berubah</div>
+              </div> 
+            </div>   
+          </div>
+        </div>
+    </div>
+  
+  </section>            <style>
+    .accordion-item {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    }
+
+    .accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    }
+</style>
+<section class="py-7" style="border-top: 1px solid rgba(0,0,0,.125);">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-12 text-start mb-3 text-center">
+                <h3 class="text-dark text-gradient z-index-1 position-relative">Yuk Pelajari Dulu!</h3>
+                <p class="text-dark text-gradient opacity-8 mb-0">Baca dan pelajari terlebih dahulu jalur/kelompok pendaftaran dan persyaratan pada PPDB tahun ajaran 2023/2024</p>
+            </div>
+            <div class="col-md-12">
+                
+                
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="info text-center">
+                            <h5 style="letter-spacing:1.2px; color:#051228!important; font-weight:normal">Jalur /Kelompok pendaftaran apa saja yang dapat dipilih pada PPDB tahun ajaran 2023/2024?</h5>
+                        <a href="https://ppdb.riau.go.id/informasi/jalur"><button type="button" class="btn btn-primary mt-2" style="border-radius: 20px; letter-spacing:2px">Informasi Jalur/Kelompok</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <div class="info text-center">
+                          <h5 style="letter-spacing:1.2px; color:#051228!important; font-weight:normal">Persyaratan apa saja yang dibutuhkan dan harus dilengkapi pada PPDB tahun ajaran 2023/2024?</h5>
+                          <a href="https://ppdb.riau.go.id/informasi/persyaratan"><button type="button" class="btn btn-primary mt-2" style="border-radius: 20px; letter-spacing:2px">Informasi Persyaratan</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>     
+</section>        
+        <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <!-- <footer class="footer py-4 bg-gradient-primary position-relative overflow-hidden"> -->
+  <div class="footer bg-gradient-dark position-relative" style="padding-top:0.3rem; padding-bottom:0rem; background: #3a416f">
+    <!-- <img src="https://ppdb.riau.go.id/frontend/soft-ui-design-system-main/assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-4"> -->
+    <div class="container">
+      
+    </div>
+  </div>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VGV7BVNT"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q7VGV7BVNT');
+        </script>
+        
+        <script type="text/javascript">
+	
+	function aptikaLoadingFadeIn() {
+		loadingBlock();
+	}
+
+	function aptikaLoadingFadeOut() {
+		$.unblockUI();
+	}
+	
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // escape key maps to keycode `27`
+			aptikaLoadingFadeOut()
+		}
+	});
+
+	function loadingBlock() { 
+		$.blockUI({
+			css: { 
+				border: 'none', 
+				padding: '10px', 
+				width: '150px', 
+				top:"40%",left:"45%",
+				textAlign:"center",
+				backgroundColor: '#000', 
+				'-webkit-border-radius': '10px', 
+				'-moz-border-radius': '10px', 
+				opacity: .5, 
+				color: '#fff',
+                baseZ: 9999,
+			},
+			message: '<h4>Loading... <i class="fa fa-refresh fa-spin"></i></h4>',
+			onOverlayClick: $.unblockUI
+		}); 
+	}
+
+	$.fn.hasAttr = function(name) {
+		return (typeof $(this).attr(name) !== 'undefined' && $(this).attr(name) !== false &&  $(this).attr(name) !== null);
+	};
+
+    $.fn.exist = function(property) {
+		return (typeof property !== 'undefined' && property !== false &&  property !== null);
+    }
+
+	$.fn.select2Spinner = function(action, element, placeholder) {
+		if (action == 'show') {
+			$('#select2-'+element+'-container').prepend('<i class="fa fa-spinner fa-spin"></i>');
+		} else {
+			$('#select2-'+element+'-container').html('<span class="select2-selection__placeholder">'+placeholder+'</span>');
+		}
+	}
+
+    if (document.getElementById('typed')) {
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+    
+    if (document.getElementsByClassName('page-header')) {
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset;
+            var bgParallax = document.querySelector('.page-header');
+            if ($(this).exist(bgParallax)) {
+                var limit = bgParallax.offsetTop + bgParallax.offsetHeight;
+                if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit) {
+                    bgParallax.style.backgroundPositionY = (50 - 10 * scrollPosition / limit * 3) + '%';
+                } else {
+                    bgParallax.style.backgroundPositionY = '50%';
+                }
+            }
+        });
+    }
+
+	$(document).on('keyup change ', '.form-control', function() {
+		$('#kirim-submit').show();
+    });
+    
+    $('.select2').select2();
+
+	
+    $(document).ready(function() {
+        $(document).on('click', '.btn-prev, .btn-next', function() {
+            var _data_href = ($(this).hasAttr('data-href')) ? $(this).attr('data-href') : '';
+			var _url_target = "https://ppdb.riau.go.id" + '/' + _data_href;
+			location.href= _url_target;
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    // $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+    // $.fn.modal.Constructor.prototype._enforceFocus = function() {};
+</script>            <script>
+        $("#panduan-ppdb").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#pendaftar").offset().top
+            }, 500);
+        })
+    </script>
+    <script>
+      $(document).ready(function() {
+        Swal.fire({
+          title: '<img src="https://ppdb.riau.go.id/images/PPDB ONLINE.png" width="auto" height="30px">',
+          icon: '',
+          html:
+            '<div style="display: block;font-family:Roboto;background: #344767;letter-spacing:.8px;font-size: .95rem;color: #fff;border-radius: 20px;box-shadow: 0px 2px 4px 1px rgb(143 139 139 / 60%);padding:40px 20px;"><span style="text-align:center; font-size:1.25rem;"><strong>Pengumuman</strong></span><br><div style="text-align:center;margin-top:10px;">Hasil perankingan akhir akan diumumkan pada : <br>'+
+            '<div style="margin-top:10px; font-size:.95rem;"><strong>Rabu, 06 Juli 2023 <br>'+'Pukul 16.00 WIB </strong></div><br>Silahkan periksa hasil perankingan dan cetak kartu pendaftaran</div></div>',
+          showCloseButton: false,
+          showCancelButton: false,
+          showConfirmButton: false,
+        })
+    });
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      </body>
+</html>

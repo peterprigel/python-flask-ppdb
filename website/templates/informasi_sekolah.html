@@ -1,0 +1,751 @@
+<!--
+=========================================================
+* Soft UI Design System - v1.0.5
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/kuning.jpg" type="image/icon type">
+        <meta name="csrf-token" content="qD7Wpy8pywZxVbRpx4rUkyoH5dBGZbgnYrglDJ4C">
+        <title> TRITHE </title>
+
+        <!-- Select2 -->
+        <link rel="stylesheet" media="screen, print" href="#">
+        
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+      
+        <!-- CSS Files -->
+        <link id="pagestyle" href="https://ppdb.riau.go.id/css/soft-ui/soft-design-system.css" rel="stylesheet" />
+        <!--  SweetAlert2  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <style>
+    .timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #2C3256;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 20px 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #051228!important;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 0px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 0px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 0px 20px 20px;
+    }
+}
+</style>
+                <style>
+            /* .alert-blink-sederhana {
+            animation: blinkMe 3s linear infinite;
+            }
+            @keyframes  blinkMe {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            } */
+        </style>
+        <style type="text/css">
+            .alert-dismissible .btn-close {
+                padding: 1rem 1rem !important;
+            }
+
+            .alert-blink {
+                -webkit-animation: blink 2s linear infinite;
+                -moz-animation: blink 2s linear infinite;
+                -ms-animation: blink 2s linear infinite;
+                -o-animation: blink 2s linear infinite;
+                animation: blink 2s linear infinite;
+            }
+            @-webkit-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-moz-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-ms-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-o-keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @keyframes  blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            
+            @media  screen and (min-width: 576px) {
+                .modal-xxl {
+                    width: 90% !important;
+                    max-width: 90% !important;
+                }
+            }
+        </style>
+        <style>
+            .select2-container .select2-selection--single{
+                height: 36px;
+                border-radius: 10px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__rendered{
+                line-height: 24px;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__arrow b{
+                margin-top: 0px;
+            }
+            .select2-results__option{
+                font-size:.8rem;
+            }
+            .select-btn{
+                width:250px; 
+                height:40px; 
+                color:black; 
+                border-radius:50px
+            }
+            .buttons-excel{
+                background: #00aa4e;
+                color:#fff;
+            }
+            #datatable_wrapper, #ranking-table{
+                background: #fdfdfd;
+                border-radius: 10px;
+                margin-top: 20px;
+                border: 1px solid #ddd;
+            }
+            /* .col-col{
+                display: flex;
+            } */
+    
+            @media (max-width: 768px) { 
+                /* .col-col{
+                    display: block;
+                } */
+                .select-btn{
+                    min-width:100%;
+                }
+                div.dataTables_wrapper div.dataTables_filter input{
+                    width:140px;
+                }
+                .dataTables_length select{
+                    appearance: unset;
+                }
+                div.dataTables_wrapper div.dataTables_length select{
+                    width: 50px;
+                }
+                .footer-mobile{
+                    display: none;
+                }
+            }
+        </style>
+        
+    </head>
+
+    <body class="" style="background:#f9f9f9; font-family:Poppins">
+        <style>
+    .dropdown.nav-item .dropdown-menu-animation.show {
+        height: 150px;
+    }
+    #dropdown-profile:before{
+        display:none !important;
+    }
+</style>
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary position-sticky z-index-sticky top-0 w-100 top-0 z-index-fixed position-absolute my-0 py-0 start-0 end-0"> -->
+    <nav class="navbar navbar-expand-lg blur blur-rounded top-2 z-index-fixed shadow-bg-gradient-warning position-sticky z-index-sticky top-0 top-0 z-index-fixed position-absolute my-3 py-2 start-0 end-0 mx-2 col-md-mx-4">
+  
+        <div class="container" style="padding: 1.5px">
+            <a class="navbar-brand text-black font-weight-bolder" href="/" rel="tooltip" 
+                title="PPDB 2022">
+                <!-- <img src="img/ppdb1.png" width="auto" height="35px"> -->
+                <img src="{{ url_for('static', filename='img/ppdb1.png')}}" width="auto" height="35px">
+            </a>
+            
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mt-2">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </span>
+            </button>
+    
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                <ul class="navbar-nav navbar-nav-hover ms-lg-auto">
+                
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon me-2" href="/">
+                            <p class="d-inline text-sm z-index-1 font-bold">
+                                Halaman Utama
+                            </p>
+                        </a>
+                    </li>
+                    
+                    
+                    <style>
+                        .dropdown-item:focus, .dropdown-item:hover{
+                            color:#fff !important;
+                        }
+                        .dropdown.nav-item .dropdown-menu-animation.show{
+                            overflow: hidden;
+                            height: auto;
+                            margin-bottom:10px;
+                        }
+                    </style>
+                    
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                            id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Informasi
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                            <div class="d-none d-lg-block">
+                                <ul class="list-group">
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 border-radius-md text-dark" href="/informasi-sekolah">
+                                            <div class="d-flex">
+                                                <div>
+                                                    Sekolah
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </li>
+                                    </li>
+                                        <li class="nav-item list-group-item border-0 p-0">
+                                             <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                                    <div class="d-flex">
+                                                <div>
+                                                    Persyaratan
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                            <div class="d-flex">
+                                                <div>
+                                                    Pendaftaran Siswa
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-md-12 g-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-sekolah">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Sekolah
+                                            </div>
+                                        </div>
+                                    </a>
+                                      <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/informasi-persyaratan">
+                                        <div class="d-flex">
+                                            <div>
+                                                Persyaratan
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" 
+                            id="dropdownMenuInformasi2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Statistik
+                           
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuInformasi2">
+                            <div class="d-none d-lg-block">
+                                <ul class="list-group">
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                            <div class="d-flex">
+                                                <div>
+                                                        Status Pendaftaran Siswa
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                   </ul>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-md-12 g-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md text-dark" href="/status-pendaftaran-siswa">
+                                        <div class="d-flex">
+                                            <div>
+                                                    Status Pendaftaran Siswa
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                        <!-- <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/logout" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Keluar
+                            </a>
+                        </li> -->
+                        <!-- <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/login" class="btn btn-warning  btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Masuk
+                            </a>
+                        </li>
+                        <li class="nav-item my-auto ms-3 ms-lg-0">
+                            <a href="/sign-up" class="btn btn-warning btn-round mb-0 me-1 mt-2 mt-md-0" style="color: #000000;">
+                                Registrasi
+                            </a>
+                        </li> -->
+                                </ul>
+            </div>
+        </div>
+    </nav>       
+    
+    <!-- stop navbarr-->
+    <div class="container mt-5" style="min-height: 70vh !important;">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">                        
+                    <!-- <div class="mb-4">
+                        <div class="w-50">
+                            <nav aria-label="breadcrumb ">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="https://ppdb.riau.go.id">Halaman Utama</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Informasi Persyaratan</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <h3>Informasi Persyaratan</h3>
+                    </div> -->
+                                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<style>
+    .icon-sm i {
+        top: 7px !important; 
+    }
+    .bi{
+        position: absolute;
+        right: 15px;
+    }
+</style>
+<br>
+<section class="breadcrumb-classic context-dark">
+    <div class="shell section-30 section-sm-top-70 section-sm-bottom-60">
+      <h1 class=" reveal-sm-block">Tentang SMK BATAM</h1>
+    </div>
+  </section>
+  <div class="resp-tabs-container text-sm-left tabs-lg-collapsed r-float">
+                
+    <div>
+      <div class="inset-lg-left-60">
+            <h2 class="text-bold reveal-lg-block">_</h2>
+            <div class="hr divider bg-madison hr-sm-left-0 veil reveal-lg-block"></div>
+            <div class="offset-lg-top-60">
+               <p style="margin-left: 1.5in; text-align: center;">
+<strong>RIWAYAT SINGKAT, TUJUAN , DATA - DATA</strong>
+<p style="margin-left: 1.5in; text-align: center;">
+<strong>KOMPETENSI KEHALIAN, VISI dan MISI</strong></p>
+<p align="justify">
+<strong>1. RIWAYAT SINGKAT</strong></p>
+<p align="justify">
+    Awal berdirinya SMK Batam adalah untuk memenuhi tuntutan pasar kerja pada saat itu tahun 2013. SMK Batam berdiri di lokasi Perum Sekawan Pemko Batam Kelurahan Belian Kecamatan Batam Kota. 
+
+    Perdirjen Dikdasmen No. 06/D.D5/KK/2018 tanggal 7 Juni 2018 tentang Spektrum Keahlian Sekolah Menengah Kejuruan (SMK)/Madrasah Aliyah Kejuruan (MAK) memberikan panduan tentang Bidang Keahlian (Jurusan) yang ada di SMK Batam </p>
+<br>
+<p align="justify">
+<strong>2. TUJUAN</strong></p>
+<p align="justify">
+ bertujuan menghasilkan kemampuan dan keahlian, mengembangkan dan menyebarluaskan ilmu dan teknologi serta mengupayakan pengguna-annya untuk meningkatkan taraf hidup masyarakat, sesuai tuntutan masyarakat bisnis dan industri.</p>
+<p align="justify">
+&nbsp;</p>
+<strong>3. DATA - DATA SEKOLAH</strong></p>
+<p align="justify">
+    Nama Sekolah    : SMK Batam
+</p>
+<p align="justify">
+    Jenis Sekolah   : Kejuruan Tekhnologi
+</p>
+<p align="justify">
+    Didirikan Pada  : Juli 2019
+</p>
+<p align="justify">
+    NSS/ NPSN       : 4312201060
+</p>
+<p align="justify">
+    Kepala Sekolah  : Muhamad Iwan Rahmawan S.Kom. M.Ds.
+</p>
+&nbsp;</p>
+<p align="justify">
+<strong>4. KOMPETENSI KEAHLIAN</strong></p>
+<p align="justify">
+1.      Multimedia</p>
+<p align="justify">
+2.      Teknik Jaringan Akses Telekomunikasi</p>
+<p align="justify">
+3.      Teknik Rekayasa Perangkat Lunak</p>
+<p align="justify">
+4.      Teknik Komputer dan Jaringan</p>
+<p align="justify">
+&nbsp;</p>
+<p align="justify">
+<strong>4. VISI dan MISI</strong></p>
+<p align="justify">
+Visi Misi kami merupakan suatu citra terpadu yang berisi angan-angan/keinginan untuk menjadikan SMK Batam sebagai <em>to be the one </em>. hal ini dimaksudkan untuk memberi gambaran yang nyata pada masyarakat, namun tetap menjadi tantangan dalam meningkatkan kualitas proses pembelajaran yang efektif dan efisien.</p>
+<p align="justify">
+<strong>Visi </strong></p>
+<p align="justify">
+<strong>TO BE THE<em> ONE</em></strong></p>
+<p align="justify">
+Visi SMK BATAM merupakan sarana yang diperlukan untuk memumpunkan perhatian dan usaha, serta berfungsi untuk memberikan orientasi </p>
+<p align="justify">
+<strong>Misi</strong></p>
+<p align="justify">
+Misi ini bertujuan:</p>
+<p align="justify">
+- menghasilkan lulusan pada jenjang pendidikan tinggi yang memiliki kompetensi keilmuan, keterampilan, dan karakter, yang sesuai dengan kebutuhan untuk memajukan masyarakat bisnis dan industri</p>
+<p align="justify">
+- memajukan penelitian, penerapan ilmu dan teknologi, dalam rangka perannya menjadi mitra masyarakat binis dan industri</p>
+
+<p align="justify">
+- mengelola sumberdaya manusia, dana, sarana, dan prasarana yang diperlukan</p>
+<p align="justify">
+- mengembangkan kerjasama dengan lembaga lain baik yang berasal dari dalam negeri maupun luar negeri.</p>
+<p align="justify">
+&nbsp;</p>
+
+<p align="justify">
+<strong>Kepala Sekolah</strong></p>
+<p align="justify">
+<em></em>Muhamad Iwan Rahmawan S.Kom. M.Ds.</p>
+<p align="justify">
+<strong>Staff Menejemen</strong></p>
+<p align="justify">
+<em></em></p>
+<p align="justify">
+<em></em>Albuchari Muslim</p>
+<p align="justify">
+<em></em>Peter Prigel Wicaksono</p>
+<p align="justify">
+<em></em>Bella Nurani Pricillia</p>
+<p align="justify">
+
+            </div>
+ 
+
+
+           </script>
+        
+        <script type="text/javascript">
+	
+	function aptikaLoadingFadeIn() {
+		loadingBlock();
+	}
+
+	function aptikaLoadingFadeOut() {
+		$.unblockUI();
+	}
+	
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // escape key maps to keycode `27`
+			aptikaLoadingFadeOut()
+		}
+	});
+
+	function loadingBlock() { 
+		$.blockUI({
+			css: { 
+				border: 'none', 
+				padding: '10px', 
+				width: '150px', 
+				top:"40%",left:"45%",
+				textAlign:"center",
+				backgroundColor: '#000', 
+				'-webkit-border-radius': '10px', 
+				'-moz-border-radius': '10px', 
+				opacity: .5, 
+				color: '#fff',
+                baseZ: 9999,
+			},
+			message: '<h4>Loading... <i class="fa fa-refresh fa-spin"></i></h4>',
+			onOverlayClick: $.unblockUI
+		}); 
+	}
+
+	$.fn.hasAttr = function(name) {
+		return (typeof $(this).attr(name) !== 'undefined' && $(this).attr(name) !== false &&  $(this).attr(name) !== null);
+	};
+
+    $.fn.exist = function(property) {
+		return (typeof property !== 'undefined' && property !== false &&  property !== null);
+    }
+
+	$.fn.select2Spinner = function(action, element, placeholder) {
+		if (action == 'show') {
+			$('#select2-'+element+'-container').prepend('<i class="fa fa-spinner fa-spin"></i>');
+		} else {
+			$('#select2-'+element+'-container').html('<span class="select2-selection__placeholder">'+placeholder+'</span>');
+		}
+	}
+
+    if (document.getElementById('typed')) {
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+    
+    if (document.getElementsByClassName('page-header')) {
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset;
+            var bgParallax = document.querySelector('.page-header');
+            if ($(this).exist(bgParallax)) {
+                var limit = bgParallax.offsetTop + bgParallax.offsetHeight;
+                if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit) {
+                    bgParallax.style.backgroundPositionY = (50 - 10 * scrollPosition / limit * 3) + '%';
+                } else {
+                    bgParallax.style.backgroundPositionY = '50%';
+                }
+            }
+        });
+    }
+
+	$(document).on('keyup change ', '.form-control', function() {
+		$('#kirim-submit').show();
+    });
+    
+    $('.select2').select2();
+
+	
+    $(document).ready(function() {
+        $(document).on('click', '.btn-prev, .btn-next', function() {
+            var _data_href = ($(this).hasAttr('data-href')) ? $(this).attr('data-href') : '';
+			var _url_target = "https://ppdb.riau.go.id" + '/' + _data_href;
+			location.href= _url_target;
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    // $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+    // $.fn.modal.Constructor.prototype._enforceFocus = function() {};
+</script>            </body>
+</html>
